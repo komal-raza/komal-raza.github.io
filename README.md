@@ -1,6 +1,6 @@
 # React + Vite
 
-My Developer Portfolio
+My React Developer Portfolio
 
 Currently, two official plugins are available:
 
