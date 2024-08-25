@@ -11,16 +11,6 @@ import { experiences } from "../constants";
 import { textVariant } from "../utils/motion";
 import ExperienceCard from "./ExperienceCard";
 
-// const ExperienceCard = ({ experience }) => {
-
-//   console.log(experience)
-//   return (
-//     <>
-
-//     </>
-//   );
-// };
-
 const Experience = () => {
   return (
     <>

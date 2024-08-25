@@ -2,7 +2,7 @@ import React from "react";
 import { SectionWrapper } from "./hoc";
 import { motion } from "framer-motion";
 import { styles } from "../style";
-import { github } from "../assets";
+import { github, live } from "../assets";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -15,9 +15,16 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      whileInView={{ scale: [0, 1] }}
+      transition={{
+        duration: 0.95,
+      }}
+    >
       <Tilt
         options={{
           max: 45,
@@ -34,24 +41,33 @@ const ProjectCard = ({
           />
 
           {/* make something appear on top  */}
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+          <div className="absolute inset-0 flex justify-end gap-3 m-3 card-img_hover">
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            )}
 
-            {/* Add the live Link foe your project */}
-            {/* <div
-            onClick={()=> window.open(source_code_link, "_blank")}
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-              <img src={github} alt="github" className="w-1/2 h-1/2 object-contain" />
-            </div> */}
+            {/* Add the live Link for your project */}
+            {link && (
+              <div
+                onClick={() => window.open(link, "_blank")}
+                className="black-gradient bg-white-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={live}
+                  alt="live"
+                  className="w-1/2 h-1/2 object-contain "
+                />
+              </div>
+            )}
           </div>
         </div>
 
@@ -61,7 +77,9 @@ const ProjectCard = ({
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags?.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
+            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+              #{tag.name}
+            </p>
           ))}
         </div>
       </Tilt>
@@ -77,14 +95,14 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
 
-      <div className="w-full flex">
+      <div className="w-full flex justify-center items-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Following Projects showcases my skills and experinece through
           real-world examples of my work. Each project is briefly described with
-          links to code repositories an dlive demos in it. it reflects my
+          links to code repositories and live demos in it. it reflects my
           ability to work with different technologies and manage project
           effectively
         </motion.p>
@@ -99,4 +117,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "project");

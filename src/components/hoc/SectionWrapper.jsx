@@ -2,6 +2,7 @@ import React from "react";
 import { styles } from "../../style";
 import { staggerContainer } from "../../utils/motion";
 import { motion } from "framer-motion";
+import { github, linkedin } from "../../assets";
 
 const SectionWrapper = (Components, idName) =>
   function HOC() {
@@ -18,6 +19,7 @@ const SectionWrapper = (Components, idName) =>
           &nbsp;
         </span>
         <Components />
+        
       </motion.section>
     );
   };

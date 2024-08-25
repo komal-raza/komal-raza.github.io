@@ -1,8 +1,6 @@
+import { color } from "framer-motion";
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+
   javascript,
   typescript,
   html,
@@ -14,15 +12,26 @@ import {
   mongodb,
   git,
   figma,
-  docker,
   company1,
   LeoaTech,
   skipq,
   Precise,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+ 
+  viralLaunch,
+  spaceX,
+  food,
+  ThriftOps,
+  hulu,
+  memorie,
+  postgres,
+  shopify,
+ 
+  react,
+  gitHub,
+  sass,
+  styled,
+  CICD,
+  vscode,
 } from "../assets";
 
 export const navLinks = [
@@ -35,6 +44,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "project",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -42,21 +55,37 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Frontend Development",
+    icon: react,
+    tags: [
+      "React.js",
+      "Next.js",
+      "HTML/CSS",
+      "Material-UI",
+      "Bootstrap",
+      "Tailwind CSS",
+    ],
   },
   {
-    title: "React Developer",
-    icon: mobile,
+    title: "Shopify App Development",
+    icon: shopify,
+    tags: [
+      "Custom & Public Apps",
+      "Shopify Polaris",
+      "API Integrations",
+      "Shopify APIs",
+    ],
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "PERN Stack Developement",
+    icon: postgres,
+    tags: ["PostgreSQL", "Express", "React.js", "Node.js", "Prisma ORM"],
   },
-  // {
-  //   title: "Content Creator",
-  //   icon: creator,
-  // },
+  {
+    title: "MERN Stack Developement",
+    icon: mongodb,
+    tags: ["Mongo DB", "Express", "React.js", "Node.js", "Mongoose"],
+  },
 ];
 
 const technologies = [
@@ -97,44 +126,63 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "GitHub",
+    icon: gitHub,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   {
     name: "PostgreSQL",
-    icon: docker,
+    icon: postgres,
+  },
+  {
+    name: "SCSS",
+    icon: sass,
+  },
+  {
+    name: "Styled Component",
+    icon: styled,
+  },
+  {
+    name: "VS Code",
+    icon: vscode,
+  },
+  {
+    name: "CI/CD",
+    icon: CICD,
   },
 ];
 
 const experiences = [
   {
-    title: "Full stack Developer",
-    company_name: "Leoa Tech",
+    title: "FULL STACK DEVELOPER",
+    company_name: "LeoaTech",
     icon: LeoaTech,
     iconBg: "#383E56",
     date: "December 2022 - Present",
     points: [
-      "Created the Shopify Merchant app from scratch using reusable React components and advanced front-end libraries.",
-      "Managed client-side data efficiently by incorporating the Redux toolkit as a State Management Library.",
-      `Developed Backend server and REST API Routes with Node.js and Express.js, integrating API functionality on the client side using
-      React-query.`,
-      `Ensured secure API request verification from both the Shopify Store and Merchant Store by implementing an
-      authentication middleware with Shopify Admin API for Oauth.`,
-      "Streamlined client subscription plans and payment methods by integrating the Shopify billing API.",
-      `Established a smooth connection between the backend server and PostgreSQL database for efficient data storage and
-      retrieval`,
+      `Engineered custom private and public Shopify apps using Node.js, Express.js, React.js, Shopify Polaris, and
+PostgreSQL`,
+      `Developed and optimized REST APIs for seamless data storage and retrieval from Shopify app front-ends`,
+      `Integrated Shopify services such as GraphQL Admin API, REST Admin API, GDPR webhooks, and Shopify
+Billing API`,
+      `Utilized advanced React.js practices including Redux Toolkit, Context API, React Hooks, and React Query for
+efficient state management`,
+      `Improved app performance through code splitting and lazy loading techniques, reducing bounce rates`,
+      `Translated Figma designs into responsive, interactive user interfaces using React.js and Tailwind CSS`,
+      `Established a comprehensive design system to standardize development practices and maintain project consistency`,
+      `Collaborated with cross-functional teams to design scalable database architectures, develop APIs, and create
+software components`,
     ],
   },
   {
-    title: "Mern stack Trainee",
+    title: "Trainee MERN STACK DEVELOPER",
     company_name: "SkipQ",
     icon: skipq,
     iconBg: "#E6DEDD",
@@ -147,29 +195,30 @@ const experiences = [
     ],
   },
   {
-    title: "Frontend Developer",
+    title: "FRONTEND DEVELOPER - INTERN",
     company_name: "DocSoft.ai",
     icon: company1,
     iconBg: "#E6DEDD",
     date: "Aug 2022 - Dec 2022",
     points: [
-      `Contributed to the development of AI Saas Product app and design and development website with an advanced
-      modern framework for a better User Experience.`,
-      "Updated Admin dashboard to improve user interface and add new functionality and routes using Next.js routing.",
-      "Collaborated with backend developer to Integrate APIs and annotate data extracted from the documents.",
-      "Completed 3-month project contract along with mentorship to understand workflow and industry standard",
+      `Enhanced user experience by developing and designing the frontend interface based on Figma designs`,
+      ` Upgraded the dashboard UI features and functionality using React.js and Next.js`,
+      `Integrated APIs and annotated data extracted from documents in collaboration with the back-end team`,
     ],
   },
   {
-    title: "React Developer",
+    title: "REACT.JS DEVELOPER - INTERN",
     company_name: "Precise Tech",
     icon: Precise,
     iconBg: "#383E56",
     date: "Mar 2022 - July 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      `Contributed significantly to developing new features such as Search and filtering data, Editing user profiles and managing protect-routes with role-based authorization`,
-      "Worked with a diversified team from across the globe remotely, enhancing teamwork and JavaScript proficiency",
+      `Worked on a large-scale production app, enhancing skills in React.js and adopting advanced development
+      techniques`,
+      `Developed new features including data search and filtering in nested components, route protection based on
+      authorization, and user data updates`,
+      `Conducted end-to-end testing, debugged frontend issues, and managed JIRA tickets`,
+      `Collaborated with a global, diversified team, enhancing teamwork and JavaScript proficiency.`,
     ],
   },
 ];
@@ -203,68 +252,150 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Viral Launch",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Custom Shopify Application that aimed at enhancing email list building and customer engagement during product launches",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "postgres",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "node",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: viralLaunch,
+    // source_code_link: "https://github.com/LeoaTech/XychrosPreLauncherUpdated",
+    link: "https://apps.shopify.com/viral-launch?show_store_picker=1",
   },
   {
-    name: "Job IT",
+    name: "Thrift-Ops",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A web-based application, by translating figma design into responsive UI using React.js.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "cloudinary",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "figma",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: ThriftOps,
+  },
+
+  {
+    name: "Memories App",
+    description:
+      "Memories Application, where users can post their memories,view and like other's memories. User can edit and delete their memories",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mui",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node",
+        color: "pink-text-gradient",
+      },
+      { name: "express", color: "green-text-gradient" },
+      { name: "mongodb", color: "blue-text-gradient" },
+    ],
+    image: memorie,
+    source_code_link: "https://github.com/komal-raza/memories-app",
+    link: "https://memories-app-three.vercel.app/posts",
   },
   {
-    name: "Airbnb Clone 1.0",
+    name: "Space X Clone",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "SpaceX Clone is a Web based Project that i built to learn HTML/ CSS and Javascript and deploy web site using github actions",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+      { name: "github-actions", color: "green-text-gradient" },
+    ],
+    image: spaceX,
+    source_code_link: "https://github.com/komal-raza/Space-X-Clone/",
+    link: "https://komal-raza.github.io/Space-X-Clone/index.html",
+  },
+  {
+    name: "Hulu Clone 1.0",
+    description:
+      "Hulu Clone 1.0 is a next.js application that display recent trending movies list. ",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
+        name: "tailwind css",
         color: "pink-text-gradient",
       },
+      { name: "api-integration", color: "blue-text-gradient" },
+
+      { name: "vercel", color: "green-text-gradient" },
+
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: hulu,
+    source_code_link: "https://github.com/raza-komal/Hulu-Next.js-app",
+    link: "https://hulu-clone-black-psi.vercel.app/",
+  },
+  {
+    name: "Restaurant Landing Page",
+    description:
+      "Designed a Website Landing Page using HTML, CSS and jQuery. This Project was a part of Web development Course on Udemy ",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      { name: "jquery", color: "green-text-gradient" },
+    ],
+    image: food,
+    source_code_link: "https://github.com/komal-raza/Dream-Cafe-main",
+    link: "https://komal-raza.github.io/Dream-Cafe-main/",
   },
 ];
 
+// https://github.com/raza-komal/BY-Shoo-App
+// https://by-shooo.netlify.app/
 export { services, technologies, experiences, testimonials, projects };

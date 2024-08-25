@@ -17,6 +17,7 @@ const Stars = (props) => {
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
   });
+
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} frustumCulled {...props} stride={3} positions={sphere}>
@@ -30,6 +31,7 @@ const Stars = (props) => {
       </Points>
     </group>
   );
+
 };
 
 const StarsCanvas = () => {
