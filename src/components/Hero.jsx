@@ -122,7 +122,7 @@ const Hero = () => {
           {/* Text of Hero Section */}
           <div className="lg:w-1/2 flex flex-col justify-center items-center mt-5 ">
             <div className="flex">
-            <span className="text-2xl"> 👋</span> 
+              <span className="text-2xl"> 👋</span>
               <div className="flex flex-col">
                 <motion.h1
                   className="text-5xl lg:text-6xl font-bold text-white"
@@ -130,11 +130,10 @@ const Hero = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1 }}
                 >
-                 Hi, I'm{" "}
-                  <span className="text-[#ac94e0]">Komal Raza</span>
+                  Hi, I'm <span className="text-[#ac94e0]">Komal Raza</span>
                 </motion.h1>
                 <motion.h2
-                  className=" mt-4 text-2xl lg:text-2xl font-semibold mb-4"
+                  className=" mt-4 h-16 text-2xl lg:text-2xl font-semibold mb-4"
                   initial={{ x: -200, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, delay: 0.2 }}
@@ -158,7 +157,7 @@ const Hero = () => {
                 <div className="mt-6 flex space-x-4">
                   <motion.a
                     href="#project"
-                    className="px-6 py-3 bg-[#915eff] cursor-pointer text-white rounded-full font-semibold text-lg hover:bg-[#7b4cd1] transition-colors"
+                    className="px-2 py-2 w-32 md:w-48 md:px-6 md:py-3 text-center bg-[#915eff] cursor-pointer text-white rounded-full font-semibold text-sm md:text-lg hover:bg-[#7b4cd1] transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     initial={{ x: -200, opacity: 0 }}
@@ -169,7 +168,7 @@ const Hero = () => {
                   </motion.a>
                   <motion.a
                     href="#contact"
-                    className="px-6 py-3 bg-white text-[#915eff] rounded-full font-semibold text-lg hover:bg-gray-200 transition-colors"
+                    className="px-2 py-2 w-32 md:w-48 md:px-6 md:py-3 text-center bg-white text-[#915eff] rounded-full font-semibold text-sm md:text-lg hover:bg-gray-200 transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     initial={{ x: -200, opacity: 0 }}
@@ -181,7 +180,7 @@ const Hero = () => {
                 </div>
 
                 <div className="mt-6 flex space-x-4">
-                  <ul className="flex justify-between items-center gap-10 sm:gap-2">
+                  <ul className="flex justify-between items-center gap-4 md:gap-10">
                     {[
                       {
                         title: github,
@@ -198,7 +197,7 @@ const Hero = () => {
                       >
                         <Link to={link} className="cursor-pointer">
                           <img
-                            className="h-4 w-4 md:w-8 md:h-8 "
+                            className="w-8 h-8 "
                             src={title}
                             alt="img"
                           />
@@ -218,7 +217,7 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <img src={heroimg} alt="Developer Girl" className="w-full h-auto" /> 
+            <img src={heroimg} alt="Developer Girl" className="w-full h-auto" />
           </motion.div>
         </div>
       </div>

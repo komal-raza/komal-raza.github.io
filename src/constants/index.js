@@ -1,6 +1,5 @@
 import { color } from "framer-motion";
 import {
-
   javascript,
   typescript,
   html,
@@ -16,7 +15,6 @@ import {
   LeoaTech,
   skipq,
   Precise,
- 
   viralLaunch,
   spaceX,
   food,
@@ -25,7 +23,6 @@ import {
   memorie,
   postgres,
   shopify,
- 
   react,
   gitHub,
   sass,
@@ -146,10 +143,6 @@ const technologies = [
     icon: sass,
   },
   {
-    name: "Styled Component",
-    icon: styled,
-  },
-  {
     name: "VS Code",
     icon: vscode,
   },
@@ -157,6 +150,10 @@ const technologies = [
     name: "CI/CD",
     icon: CICD,
   },
+  // {
+  //   name: "Styled Component",
+  //   icon: styled,
+  // },
 ];
 
 const experiences = [
@@ -369,7 +366,6 @@ const projects = [
       { name: "api-integration", color: "blue-text-gradient" },
 
       { name: "vercel", color: "green-text-gradient" },
-
     ],
     image: hulu,
     source_code_link: "https://github.com/raza-komal/Hulu-Next.js-app",

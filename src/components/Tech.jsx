@@ -16,9 +16,9 @@ const Tech = () => {
         <p className={`${styles.sectionSubText} tech-text`}>My Skills</p>
         <h2 className={`${styles.sectionHeadText} tech-text`}>Technologies.</h2>
       </motion.div>
-      <div className="mt-10 flex flex-row flex-wrap justify-center gap-5">
+      <div className="mt-2  mb-16 flex flex-row flex-wrap justify-center items-center gap-8">
         {technologies?.map((technology, index) => (
-          <div className="w-44 h-full" key={technology?.name}>
+          <div className="w-32 h-full" key={technology?.name}>
             <Tilt
               options={{
                 max: 45,
