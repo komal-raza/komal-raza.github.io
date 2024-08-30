@@ -39,7 +39,9 @@ const Tech = () => {
                     src={technology.icon}
                     alt={technology.name}
                     className="h-12 w-12"
+                    loading="lazy"
                   />
+
                   <span>{technology.name}</span>
                 </div>
               </motion.div>

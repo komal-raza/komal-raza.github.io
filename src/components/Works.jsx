@@ -21,6 +21,7 @@ const ProjectCard = ({
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       whileInView={{ scale: [0, 1] }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{
         duration: 0.95,
       }}
@@ -31,12 +32,13 @@ const ProjectCard = ({
           scale: 1,
           speed: 550,
         }}
-        className="bg-tertiary p-5 rounded-2xl xs:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl xs:w-[360px] w-full overflow-hidden"
       >
-        <div className="relative h-[230px] w-full">
+        <div className="relative h-[200px] w-full sm:h-[150px] xs:h-[120px]">
           <img
             src={image}
             alt={name}
+            loading="lazy"
             className="w-full h-full object-cover rounded-2xl"
           />
 
@@ -72,12 +74,12 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <h3 className="text-white font-bold md:text-[24px] sm:text-[12px] xs:text-[9px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[11px] md:text-[14px]">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags?.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            <p key={tag.name} className={`text-[9px] md:text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
@@ -98,7 +100,7 @@ const Works = () => {
       <div className="w-full flex justify-center items-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-secondary text-[12px] md:text-[17px] max-w-3xl leading-[30px]"
         >
           Following Projects showcases my skills and experinece through
           real-world examples of my work. Each project is briefly described with
