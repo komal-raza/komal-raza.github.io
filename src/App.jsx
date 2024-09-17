@@ -1,48 +1,49 @@
+import { BrowserRouter } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { HeroCanvas, StarsCanvas } from './components/canvas';
 
-import { useEffect, useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-import { HeroCanvas } from "./components/canvas";
+const Navbar = lazy(() => import('./components/Navbar'));
+const Hero = lazy(() => import('./components/Hero'));
+const About = lazy(() => import('./components/About'));
+const Experience = lazy(() => import('./components/Experience'));
+const Tech = lazy(() => import('./components/Tech'));
+const Works = lazy(() => import('./components/Works'));
+const Contact = lazy(() => import('./components/Contact'));
 
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  About,
-  Contact,
-  Navbar,
-  Tech,
-  StarsCanvas,
-  Feedbacks,
-  Hero,
-  Works,
-  Experience,
-} from "./components";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        <div className=" bg-cover bg-no-repeat bg-center">
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <div className=" bg-cover bg-no-repeat bg-center">
             <Navbar />
-          <div className="relative border-b-1 border-[#070d1c] mb-10">
-            <Hero />
-            <HeroCanvas/>
+            <div className="relative border-b-1 border-[#01205a] mb-10">
+              <Hero />
+              {/* <HeroCanvas /> */}
+            </div>
           </div>
-        </div>
-
-        <About />
-        <Experience />
-        <div className="bg-tech-pattern relative bg-cover bg-no-repeat bg-center ">
-          <div className="tech-content">
-            <Tech />
+        </Suspense>
+       <Suspense fallback={<h1>Loading...</h1>}>
+          <About />
+          <Experience />
+        </Suspense>
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <div className="bg-tech-pattern relative bg-cover bg-no-repeat bg-center ">
+            <div className="tech-content">
+              <Tech />
+            </div>
           </div>
-        </div>
-        <Works />
-        {/* <Feedbacks /> */}
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        </Suspense>
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Works />
+        </Suspense>
+         <Suspense fallback={<h1>Loading...</h1>}>
+          <div className="relative z-0">
+            <Contact />
+            <StarsCanvas />
+          </div>
+        </Suspense>
       </div>
     </BrowserRouter>
   );

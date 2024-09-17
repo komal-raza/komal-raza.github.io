@@ -1,8 +1,7 @@
 import React from "react";
 import { technologies } from "../constants";
-import { BallCanvas } from "./canvas";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn } from "../utils/motion";
+import {  slideIn } from "../utils/motion";
 
 import { SectionWrapper } from "./hoc";
 import { textVariant } from "../utils/motion";
@@ -16,7 +15,7 @@ const Tech = () => {
         <p className={`${styles.sectionSubText} tech-text`}>My Skills</p>
         <h2 className={`${styles.sectionHeadText} tech-text`}>Technologies.</h2>
       </motion.div>
-      <div className="mt-2  mb-16 flex flex-row flex-wrap justify-center items-center gap-8">
+      <div className="mt-16 mb-16 flex flex-row flex-wrap justify-center items-center gap-8">
         {technologies?.map((technology, index) => (
           <div className="w-32 h-full" key={technology?.name}>
             <Tilt
@@ -42,7 +41,7 @@ const Tech = () => {
                     loading="lazy"
                   />
 
-                  <span>{technology.name}</span>
+                  <span className="text-sm">{technology.name}</span>
                 </div>
               </motion.div>
             </Tilt>
