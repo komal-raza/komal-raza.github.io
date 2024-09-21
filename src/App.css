@@ -18,6 +18,26 @@
   flex-direction: row;
   padding: 14rem 2rem 0;
 }
+
+/* Hero Section Images */
+
+
+.hero-portrait image{
+  display: flex;
+}
+
+.hero-portrait .image-half-round-shape {
+  bottom: 10%;
+  left: 50%;
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 0;
+  z-index: -1;
+}
 @media screen and (min-width: 2000px) {
   .app__header {
     padding-top: 8rem;

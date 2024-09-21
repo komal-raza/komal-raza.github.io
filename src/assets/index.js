@@ -42,7 +42,7 @@ import shoe from "./projects/shoe2.png";
 import memorie from "./projects/memorie.png";
 
 /* Project View Image */
-import live from "./view.png";
+import live from "./show.png";
 
 
 
@@ -66,7 +66,7 @@ import threejs from "./tech/threejs.svg";
 import mysql from "./tech-stack/mysql.png";
 
 import sass from "./tech-stack/sass.png";
-import CICD from "./tech-stack/cd.png";
+import CICD from "./tech/cicd.png";
 import styled from "./tech-stack/styled.png";
 import vscode from "./tech-stack/vscode.png";
 

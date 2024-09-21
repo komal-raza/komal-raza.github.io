@@ -32,7 +32,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 550,
         }}
-        className="bg-tertiary p-5 rounded-2xl xs:w-[360px] w-full overflow-hidden"
+        className="bg-tertiary border-t-2 border-b-2 border-[#ccabbe] p-5 rounded-2xl xs:w-[360px] w-full overflow-hidden"
       >
         <div className="relative h-[200px] w-full sm:h-[150px] xs:h-[120px]">
           <img
@@ -61,7 +61,7 @@ const ProjectCard = ({
             {link && (
               <div
                 onClick={() => window.open(link, "_blank")}
-                className="black-gradient bg-white-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
               >
                 <img
                   src={live}
@@ -92,7 +92,8 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()}
+      >
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
@@ -100,7 +101,7 @@ const Works = () => {
       <div className="w-full flex justify-center items-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[12px] md:text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[34px]"
         >
           Following Projects showcases my skills and experinece through
           real-world examples of my work. Each project is briefly described with

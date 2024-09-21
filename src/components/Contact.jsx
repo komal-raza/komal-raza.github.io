@@ -110,6 +110,7 @@ const Contact = () => {
           </label>
 
           <button
+            disabled={!form.email =="" || !form.message ==""}
             type="submit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl "
           >

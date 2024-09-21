@@ -69,7 +69,7 @@ const services = [
     tags: [
       "Custom & Public Apps",
       "Shopify Polaris",
-      "API Integrations",
+      "React-Node App ",
       "Shopify APIs",
     ],
   },
@@ -82,6 +82,11 @@ const services = [
     title: "MERN Stack Developement",
     icon: mongodb,
     tags: ["Mongo DB", "Express", "React.js", "Node.js", "Mongoose"],
+  },
+  {
+    title: "Web Designing",
+    icon: figma,
+    tags: ["Figma to Code", "Responsive Design", "User Experience"],
   },
 ];
 
@@ -166,16 +171,10 @@ const experiences = [
     points: [
       `Engineered custom private and public Shopify apps using Node.js, Express.js, React.js, Shopify Polaris, and
 PostgreSQL`,
-      `Developed and optimized REST APIs for seamless data storage and retrieval from Shopify app front-ends`,
       `Integrated Shopify services such as GraphQL Admin API, REST Admin API, GDPR webhooks, and Shopify
 Billing API`,
-      `Utilized advanced React.js practices including Redux Toolkit, Context API, React Hooks, and React Query for
-efficient state management`,
       `Improved app performance through code splitting and lazy loading techniques, reducing bounce rates`,
       `Translated Figma designs into responsive, interactive user interfaces using React.js and Tailwind CSS`,
-      `Established a comprehensive design system to standardize development practices and maintain project consistency`,
-      `Collaborated with cross-functional teams to design scalable database architectures, develop APIs, and create
-software components`,
     ],
   },
   {

@@ -14,7 +14,7 @@ import ExperienceCard from "./ExperienceCard";
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} >
         <p className={styles.sectionSubText}>What I've Done so Far</p>
         <h2 className={styles.sectionHeadText}>Work Experiences</h2>
       </motion.div>

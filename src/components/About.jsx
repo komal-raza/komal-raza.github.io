@@ -24,11 +24,18 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[34px]"
         >
-          I'm skilled software developer with Experience in Javascript,
+          {/* I'm skilled software developer with Experience in Javascript,
           expertise in frameworks like React, Node, Three.js and Custom Shopify
           app development. I'm quick learner and collborate closely with clients
           to create effiecient and scalable and user friendly solutions to solve
-          real world problems. Let's work together to bring your ideas to Life
+          real world problems. Let's work together to bring your ideas to Life */}
+          I'm skilled <strong>Software Developer</strong> specializing in both frontend and
+          backend solutions. With a strong command of JavaScript, React.js,
+          Next.js, and a variety of backend technologies like Node.js,
+          Express.js, MongoDB, and PostgreSQL, I bring a holistic approach to
+          web development. My expertise extends to creating custom Shopify apps
+          that enhance e-commerce experiences, tailored to meet unique business
+          needs. Let's work together to bring your ideas to Life!
         </motion.p>{" "}
       </div>
 
